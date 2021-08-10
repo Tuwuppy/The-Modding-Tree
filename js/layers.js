@@ -7,7 +7,7 @@ addLayer("t", {
 		points: new Decimal(0),
     }},
     color: "#4BDC13",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
+    requires: new Decimal(5), // Can be a function that takes requirement increases into account
     resource: "Tests", // Name of prestige currency
     baseResource: "Answers", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
@@ -24,5 +24,12 @@ addLayer("t", {
     hotkeys: [
         {key: "t", description: "T: Reset for tests", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        11: {
+            name: "Point Doubler",
+            description: "Doubles your point gain",
+            cost: new Decimal(1),
+        }
+    }
 })

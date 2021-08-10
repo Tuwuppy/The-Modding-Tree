@@ -7,7 +7,7 @@ let modInfo = {
 
 	discordName: "Tuwuppy's Discord",
 	discordLink: "https://www.youtube.com/watch?v=DLzxrzFCyOs",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	initialStartPoints: new Decimal (1), // Used for hard resets and new players
 	offlineLimit: 10,  // In hours
 }
 
@@ -43,6 +43,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	if (hasUpgrade('t', 11)) gain = gain.times(2)
 	return gain
 }
 
