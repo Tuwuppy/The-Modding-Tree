@@ -1,20 +1,20 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	name: "The Test Tree",
+	id: "tuwuppystree",
+	author: "Tuwuppy",
+	pointsName: "Tests",
 	modFiles: ["layers.js", "tree.js"],
 
-	discordName: "",
-	discordLink: "",
+	discordName: "Tuwuppy's Discord",
+	discordLink: "https://www.youtube.com/watch?v=DLzxrzFCyOs",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 10,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
 	num: "0.0",
-	name: "Literally nothing",
+	name: "Test",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
